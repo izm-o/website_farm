@@ -1,0 +1,606 @@
+@charset "utf-8";
+
+/*====共通のcss====*/
+html {
+    color: rgb(34, 34, 34);
+    font-family: 游明朝, "Yu Mincho", 游明朝体, YuMincho, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "Roboto Slab", Garamond, "Times New Roman", HGS明朝E, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(253, 253, 253);
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: auto;
+}
+
+a:link {
+    color: rgb(34, 34, 34);
+}
+
+a:visited {
+    color: rgb(34, 34, 34);
+}
+
+a:hover {
+    opacity: 0.6;    
+}
+
+a:active {
+    color: rgb(34, 34, 34);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*====共通のcssここまで====*/
+
+/*====ヘッダー====*/
+body {
+    padding-top: 90px;
+    /*ヘッダーの後ろに要素が隠れないようにするため*/
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+.header_inner {
+    position: relative;
+    padding: 15px;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px 15px;
+}
+
+.logo_inner {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {   
+    .logo {
+        padding: 0px 16px;
+    }
+
+    .nav_list {
+        text-align: right;
+        padding: 16px 0 2px 0;
+    }
+
+    .nav_list li {
+        display: inline-block;
+        text-align: right;
+        padding: 0 15px;        
+        font-size: 16px;
+    }
+
+    .nav_list li a {        
+        font-weight: 600;
+    }
+}
+
+/*スマホはハンバーガーメニュー*/
+@media (max-width: 767px) {
+    .nav {
+        position: fixed;
+        right: -320px;
+        /*右から出てくる*/
+        top: 0;
+        width: 300px;        
+        height: 100vh;
+        padding-top: 90px;
+        background-color: rgb(253, 253, 253);
+        transition: all .6s;
+        z-index: 200;
+        overflow-y: auto;
+        /*メニューが多くなったらスクロールできるように*/
+    }
+
+    .hamburger {
+        position: absolute;
+        right: 15px;
+        top: 25px;        
+        width: 40px;        
+        height: 40px;       
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .nav_list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nav_item {
+        text-align: center;
+        padding: 0 14px;
+    }
+
+    .nav_item a {
+        display: block;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;        
+    }
+
+    .nav_item a:active {
+        background-color: #eee;
+    }
+
+    .hamburger_border {
+        position: absolute;
+        left: 11px;
+        width: 18px;
+        height: 2px;
+        background-color: #333;
+        transition: all .6s;
+    }
+
+    .hamburger_border_top {
+        top: 14px;
+    }
+
+    .hamburger_border_center {
+        top: 20px;
+    }
+
+    .hamburger_border_bottom {
+        top: 26px;
+    }
+
+    .black_bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background-color: #333;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .6s;
+        cursor: pointer;
+    }
+
+    /* 表示された時用のCSS */
+    .nav-open .nav {
+        right: 0;
+    }
+
+    .nav-open .black_bg {
+        opacity: .8;
+        visibility: visible;
+    }
+
+    .nav-open .hamburger_border_top {
+        transform: rotate(45deg);
+        top: 20px;
+    }
+
+    .nav-open .hamburger_border_center {
+        width: 0;
+        left: 50%;
+    }
+
+    .nav-open .hamburger_border_bottom {
+        transform: rotate(-45deg);
+        top: 20px;
+    }
+}
+/*====ヘッダーここまで====*/
+
+/*====フッター====*/
+/*googlemap横幅ぴったりに*/
+.google-maps {
+    position: relative;
+    padding-bottom: 40%;    
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+/*googlemap横幅ぴったりにここまで*/
+
+#footer {    
+    padding: 0px 0px 20px 0px;
+    font-size: 12px;
+}
+
+.address {
+    text-align: center;
+}
+
+.footer_logo {
+    font-size: 28px;
+    margin: 28px 0 12px 0;    
+}
+
+.footer_address {
+    font-size: 18px;
+}
+
+.sns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 32px 0;    
+}
+
+.icon1 {
+    margin-right: 32px;
+}
+
+.icon2 {
+    margin-right: 32px;
+}
+
+.cr {
+    text-align: center;
+}
+/*====フッターここまで====*/
+
+
+/*====index.html====*/
+
+/*====キービジュアルのスライダー====*/
+/*画像の表示エリア*/
+#slide {
+    position: relative;
+    overflow: hidden;    
+    width: auto;
+    height: calc(100vh - 90px);
+    margin: auto;    
+}
+
+/*画像の設定*/
+#slide img {
+    display: block;
+    position: absolute;    
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+    animation: slideAnime 7.5s ease infinite;
+}
+
+.slidemain {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/*スライドのアニメーションを段差で開始する*/
+#slide img:nth-of-type(1) {
+    animation-delay: 0s
+}
+
+#slide img:nth-of-type(2) {
+    animation-delay: 2.5s
+}
+
+#slide img:nth-of-type(3) {
+    animation-delay: 5s
+}
+
+/*スライドのアニメーション*/
+@keyframes slideAnime {
+    0% {
+        opacity: 0
+    }
+
+    16% {
+        opacity: 1
+    }
+
+    33% {
+        opacity: 1
+    }
+
+    49% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+/*====キービジュアルのスライダーここまで====*/
+
+/*====画像が画面内に入ると、アニメーション開始====*/
+/* 1 枚目と 2 枚目の共通 */
+.img-wrap {
+    opacity: 0;
+}
+
+.img-animation {    
+    animation: img-opacity 1.5s cubic-bezier(.4, 0, .2, 1) forwards;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-animation:before {
+    animation: 1.5s cubic-bezier(.4, 0, .2, 1) forwards;
+    background: rgb(253, 253, 253);
+    bottom: 0;
+    content: '';
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+@keyframes img-opacity {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 1 枚目の画像 */
+/* 右から左へアニメーション */
+.img-animation.top:before {
+    animation-name: img-animation-right-to-left;
+}
+
+@keyframes img-animation-right-to-left {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 2 枚目の画像 */
+/* 左から右へアニメーション */
+.img-animation.bottom:before {
+    animation-name: img-animation-left-to-right;
+}
+
+@keyframes img-animation-left-to-right {
+    100% {
+        transform: translateX(100%);
+    }
+}
+/*====画像が画面内に入ると、アニメーション開始ここまで====*/
+
+
+/*====右下の購入ボタン====*/
+.button {
+    position: fixed;
+    right: 0;
+    bottom: 50px;    
+    transition: .3s;
+    opacity: 0;
+    /*デフォルトで非表示にする*/    
+    visibility: hidden;
+}
+
+/*このクラスが付与されると表示する*/
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn{
+    opacity: 0.87;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+/*フッターの手前でとめる*/
+.absolute {
+    position: absolute;
+    top: -70px;
+    bottom: auto;
+}
+
+.buy_btn_v {
+    width: 62px;
+}
+
+@media (max-width: 767px) {
+    .buy_btn_v {
+        width: 48px;
+    }
+}
+/*====右下の購入ボタンここまで====*/
+
+
+/*====レイアウト====*/
+/*section id="about"のレイアウト*/
+#about {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 7% 0 10% 0;    
+}
+
+.img-wrap.top {    
+    line-height: 0;
+    width: 50%;       
+}
+
+.about_text {    
+    margin: 5% 3% -5% 0;   
+    padding: 2% 5% 5% 10%;
+    width: 50%;
+    background-color: #ebddf1;    
+}
+
+@media (max-width: 767px) {
+    #about {
+        display: block;
+        margin: 12% 0 12% 0;
+    }
+
+    .img-wrap.top {
+        margin: 0 0 0 7%;
+        width: auto;
+    }
+
+    .about_text {
+        margin: 7% 7% 0 0;   
+        padding: 2% 7% 5% 10%;        
+        width: auto;        
+    }
+}
+
+/*section id="concept"のレイアウト*/
+#concept {
+    display: flex;    
+    margin-bottom: 12%;
+}
+
+.img-wrap.bottom {    
+    line-height: 0;
+    width: 50%;
+}
+
+.concept_text {    
+    margin: 5% 0 -5% 3%;   
+    padding: 2% 10% 5% 5%;
+    width: 50%;
+    background-color: #dff5d7;    
+}
+
+@media (max-width: 767px) {
+    #concept {
+        display: block;
+        margin-bottom: 20%;
+    }
+
+    .img-wrap.bottom {
+        margin: 0 7% 0 0;
+        width: auto;
+    }
+
+    .concept_text {
+        margin: 7% 0 0 7%;   
+        padding: 2% 11% 5% 8%;        
+        width: auto; 
+    }
+}
+
+/*section id="pickup"のレイアウト*/
+#pickup {
+    background-color: #efe8e1;
+    margin: 0 72px 150px 72px;    
+}
+
+.recommend {
+    margin: 0;    
+    padding: 55px 0 45px;  
+    font-size: 32px;       
+    text-align: center;
+}
+
+.products {
+    display: flex;
+}
+
+.products-a {
+    display: flex;
+}
+
+.products-b {
+    display: flex;
+}
+
+.products1 {
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.products2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.products3 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.products4 {
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.big {
+    font-size: 30px;
+}
+
+.small {
+    line-height: 3;
+}
+
+.allproducts-btn {
+    text-align: center;
+    margin: 0;    
+    padding: 30px 0 45px 0;
+}
+
+@media (max-width: 767px) {
+    #pickup {
+        margin: 0 52px 100px 52px;        
+    }
+    
+    .products {
+        display: block;
+    }
+
+    .products-b {
+        margin-top: 20px;
+    }  
+
+    .products1 {
+        margin-left: 20px;
+        min-width: 0px;
+    }
+
+    .products2 {
+        margin-right: 20px;
+        min-width: 0px;
+    }
+
+    .products3 {
+        margin-left: 20px;
+        min-width: 0px;
+    }
+
+    .products4 {
+        margin-right: 20px;
+        min-width: 0px;
+    }  
+}
+/*====レイアウトここまで====*/
+
+/*====index.htmlここまで====*/

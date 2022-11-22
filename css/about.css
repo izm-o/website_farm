@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/*====about.html====*/
+/*キービジュアル*/
+#about-top {
+    line-height: 0;
+    width: 100%;
+    height: 65vh;
+    overflow: hidden
+}
+
+.zoom img {
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+    object-position: bottom;
+    animation: animationZoom1 8s ease-in-out forwards;
+}
+
+@keyframes animationZoom1 {
+    0% {
+        transform: scale(1.4)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+@media (max-width: 767px) {
+    #about-top {
+        height: 40vh;
+    }
+
+    .zoom img {
+        height: 40vh;
+    }
+}
+
+/*section id="about-text"のレイアウト*/
+#about-text {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 5em 72px;
+}
+
+#about-text p {
+    line-height: 2.0;
+}
+
+.a-text1 {
+    margin-bottom: 2em;
+}
+
+.a-text2 {
+    margin-bottom: 2em;
+}
+
+@media (max-width: 767px) {
+    #about-text {
+        font-size: 1em;
+        margin: 5em 52px;
+    }
+}
+
+/*section id="introduction"のレイアウト*/
+#introduction {
+    display: flex;
+    margin-bottom: 250px;
+}
+
+.owner-img {
+    width: 50%;
+    line-height: 0;
+}
+
+.owner-text {
+    background-color: #efe8e1;
+    width: 50%;
+    margin: 5% 0 -5% 3%;
+    padding: 2% 10% 5% 5%;
+    font-size: 1.2em;
+}
+
+.owner-text p {
+    line-height: 2;
+}
+
+.o-text1 {
+    font-size: 1.4em;
+}
+
+.img-animation.owner-img:before {
+    animation-name: img-animation-left-to-right;
+}
+
+@keyframes img-animation-left-to-right {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 767px) {
+    #introduction {
+        display: block;
+        margin-bottom: 100px;
+    }
+
+    .owner-img {
+        margin: 0 7% 0 0;
+        width: auto;
+    }
+
+    .owner-text {
+        margin: 7% 0 0 7%;
+        padding: 2% 11% 5% 8%;
+        width: auto;
+        font-size: 1em;
+    }
+
+    .o-text1 {
+        font-size: 1.2em;
+    }
+}

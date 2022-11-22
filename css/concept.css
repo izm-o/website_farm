@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/*====concept.html====*/
+/*section id="concept-main"のレイアウト*/
+#concept-main {
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.main-img {
+    width: 50%;
+    line-height: 0;
+}
+
+.main-text {
+    width: 50%;
+    margin: 0 0 0 3%;
+    padding: 0 7% 0 3%;
+    font-size: 1.1em;
+}
+
+.main-text p {
+    line-height: 2.5;
+}
+
+.m-text1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.m-text2 {
+    margin: 0;
+}
+
+.img-animation.main-img:before {
+    animation-name: img-animation-left-to-right;
+}
+
+@keyframes img-animation-left-to-right {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 767px) {
+    #concept-main {
+        display: block;
+        margin-bottom: 20%;
+    }
+
+    .main-img {
+        width: auto;
+    }
+
+    .main-text {
+        width: auto;
+        margin: 10% 0 0 0;
+        padding: 0 10% 0 10%;
+        font-size: 1em;
+    }
+
+    .m-text1 {
+        font-size: 1.5em;
+        margin-bottom: 0.4em;        
+    }
+}
+
+/*section id="concept-detail"のレイアウト*/
+#concept-detail {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 250px;
+}
+
+.detail-img {
+    width: 40%;
+    line-height: 0;
+}
+
+.detail-img1 {
+    margin: 0 0 3% 0;
+}
+
+.detail-text {
+    width: 60%;
+    background-color: #efe8e1;
+    margin: 5% 3% -5% 0;
+    padding: 4% 8% 4% 10%;
+    font-size: 1.1em;
+}
+
+.detail-text p {
+    line-height: 2.5;
+}
+
+.d-text1 {
+    font-size: 1.6em;
+    margin: 0;
+}
+
+.d-text3 {
+    font-size: 1.6em;
+    margin-bottom: 0;
+}
+
+.img-animation.detail-img1:before {
+    animation-name: img-animation-right-to-left;
+}
+
+.img-animation.detail-img2:before {
+    animation-name: img-animation-right-to-left;
+}
+
+@keyframes img-animation-right-to-left {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 767px) {
+    #concept-detail {
+        display: block;
+        margin-bottom: 100px;
+    }
+
+    .detail-img {
+        width: auto;
+        margin: 0 0 0 7%;
+    }
+
+    .detail-text {
+        width: auto;
+        margin: 7% 7% 0 0;
+        padding: 8% 8% 8% 10%;
+        font-size: 1em;
+    }
+
+    .d-text1 {
+        font-size: 1.4em;
+    }
+
+    .d-text3 {
+        font-size: 1.4em;
+    }
+}

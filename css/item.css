@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/*====carrot.htmlとegg.htmlとpotato.htmlとtomato.html====*/
+.item {
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 160px;
+}
+
+@media (max-width: 767px) {
+  .item {
+    display: block;
+    margin-bottom: 120px;
+  }
+}
+
+/*section class="leftside"のレイアウト*/
+.leftside {
+  width: 60%;
+  padding-left: 7%;
+  padding-right: 0;  
+}
+
+@media (max-width: 767px) {  
+  .leftside {
+    width: auto;    
+    padding-right: 7%;
+  }
+}
+
+/*スライダー*/
+.main-img img {
+  vertical-align: bottom;
+}
+
+.sub-img {
+  display: flex;
+  margin-top: 10px;
+}
+
+.sub-img li {
+  margin-right: 2%;
+  width: calc(100% / 3);
+}
+
+.sub-img li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.sub-img img {
+  cursor: pointer;
+}
+
+/* アクティブな画像の透明度 */
+.sub-img li.current img {
+  opacity: 0.6;
+  transition: opacity .5s;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {  
+  padding: 16px 0 2px 0;
+}
+
+/*section class="rightside"のレイアウト*/
+.rightside {
+  width: 40%;
+  padding-left: 5%;
+  padding-right: 7%;  
+}
+
+.rightside-in {
+  background-color: #efe8e1;
+  padding: 10px 12px 18px;
+}
+
+.item-name {
+  font-size: 30px;
+  margin: 0;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.yen {
+  font-size: 24px;
+}
+
+.quantity {
+  font-size: 18px;
+}
+
+.buy-btn-h {
+  margin-top: 16px;
+}
+
+.buy-btn-h img {
+  vertical-align: bottom;
+}
+
+@media (max-width: 767px) { 
+  .rightside {
+    width: auto;    
+    padding-left: 7%;
+  }  
+}
