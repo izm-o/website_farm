@@ -9,7 +9,8 @@
 https://izm-o.github.io/website_farm/
 
 ## 概要
-- 
+- 「長岡農園」という架空の農園を設定し、その農園のWebサイトを制作しました。<br>
+  また、サイトの目的は「Webサイトを訪れた人が実際に農作物を購入する事」とし、制作しました。
 
 ## 技術環境
 - 開発言語：HTML5 , CSS3 , JavaScript
@@ -18,4 +19,10 @@ https://izm-o.github.io/website_farm/
 - コード管理：Git , GitHub
 - デザインツール：Adobe Illustrator , Adobe Photoshop
 
-## こだわった点や苦労した点
+## Webサイトの制作について
+### 制作期間
+10日間
+### こだわった点
+- サイトの目的は「購入につなげる事」なので、どのページからも購入ページにたどり着きやすくする為、常に右下に「購入はこちら」ボタンを配置した事。
+- レスポンシブ対応
+- JavaScriptやjQueryを使用しサイトに動きをつけた事。
