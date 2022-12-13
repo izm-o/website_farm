@@ -1,8 +1,8 @@
 ## 架空の農園「長岡農園」のWebサイト
 <p>
-<kbd><img src="https://user-images.githubusercontent.com/115522917/204413371-d51ce77e-263d-4eca-a823-c165f4040678.png" width="60%">&nbsp;
-<img src="https://user-images.githubusercontent.com/115522917/204415480-1ec013b3-5e91-4637-b256-a5fe82928cf6.png" width="17%">
-<img src="https://user-images.githubusercontent.com/115522917/204415538-31f41c79-b30e-4eb5-a839-c9be1f08861d.png" width="17%"></kbd>
+<kbd><img src="https://user-images.githubusercontent.com/115522917/204413371-d51ce77e-263d-4eca-a823-c165f4040678.png" width="56%">&nbsp;
+<img src="https://user-images.githubusercontent.com/115522917/204415480-1ec013b3-5e91-4637-b256-a5fe82928cf6.png" width="16%">
+<img src="https://user-images.githubusercontent.com/115522917/204415538-31f41c79-b30e-4eb5-a839-c9be1f08861d.png" width="16%"></kbd>
 </p>
 
 ## URL
@@ -24,5 +24,5 @@ https://izm-o.github.io/website_farm/
 10日間
 ### こだわった点
 - サイトの目的は「購入につなげる事」なので、どのページからも購入ページにたどり着きやすくする為、常に右下に「購入はこちら」ボタンを配置した事。
-- レスポンシブ対応
+- レスポンシブ対応。
 - JavaScriptやjQueryを使用しサイトに動きをつけた事。
